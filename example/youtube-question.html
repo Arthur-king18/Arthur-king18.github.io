@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Question</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" />
+</head>
+<body>
+<div class="main">
+    <div class="content">
+        <div class="content__hello">
+            <img class="content__hello-img" src="/assets/img/avatar.png" alt="Avatar">
+            <div class="content__hello-text">
+                    <span class="content__name">
+                        <a href="/"> Hey, I'm Arthur.</a>
+                    </span>
+                <span class="content__description">Let me introduce <br/> one of my projects</span>
+                <nav class="content__social">
+                    <a href="https://www.upwork.com/freelancers/~01b42fac4e238d662a?mp_source=share" target="_blank" class="content__social-item">
+                        <img src="/assets/img/icons/upwork.svg" alt="Upwork">
+                        <span>Upwork</span>
+                    </a>
+                    <a href="https://wa.me/+79127589270" target="_blank" class="content__social-item">
+                        <img src="/assets/img/icons/whatsapp.svg" alt="WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="content__social-item">
+                        <img src="/assets/img/icons/in.svg" alt="LinkedIn">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Arthur-king18" target="_blank" class="content__social-item">
+                        <img src="/assets/img/icons/github.svg" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="content__main">
+            <h1 class="content__about-header">YouTube Question</h1>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    <p>This console app saves you time by summarizing YouTube videos and providing quick answers to your questions.</p>
+                </div>
+            </div>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    <p>This script has significantly streamlined the client's team, reducing its size by three members while boosting productivity.  The team now has the capacity to analyze three times more videos, all while experiencing a fivefold reduction in errors.</p>
+                </div>
+            </div>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    <img src="/assets/img/youtube-bot.jpg" alt="project">
+                </div>
+            </div>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    <p><a href="#">Stack:</a> Python, AI, Requests</p>
+
+                    <p id="myText"><a href="#">Video</a></p>
+
+                    <div id="myModal" class="modal">
+                      <div class="modal-content">
+                        <video id="myVideo" width="700" height="560" controls="controls">
+                          <source src="/assets/img/yotubebot.mp4" type="video/mp4">
+                          Your browser does not support the video.
+                        </video>
+                      </div>
+                    </div>
+
+                    <style>
+                        .modal {
+                          display: none;
+                          position: fixed;
+                          z-index: 1;
+                          justify-content: center;
+                          align-items: center;
+                          padding-top: 5px;
+                          left: 0;
+                          top: 0;
+                          width: 100%;
+                          height: 100%;
+                          overflow: auto;
+                        }
+
+                        .modal-content {
+                          position: relative;
+                          padding: 5px;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 65%;
+                        }
+
+                        .modal-content video {
+                          object-fit: contain;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 100%;
+                          height: 100%;
+
+                        }
+
+                        .close {
+                          position: absolute; /* Добавьте это */
+                          top: 0; /* Добавьте это */
+                          right: 0; /* Добавьте это */
+                          color: #aaaaaa;
+                          float: right;
+                          font-size: 28px;
+                          font-weight: bold;
+                        }
+
+                        .close:hover,
+                        .close:focus {
+                          color: #000;
+                          text-decoration: none;
+                          cursor: pointer;
+                        }
+                    </style>
+
+                    <script>
+                        // Получаем элементы
+                        var modal = document.getElementById("myModal");
+                        var text = document.getElementById("myText");
+                        var video = document.getElementById("myVideo");
+
+                        text.onclick = function() {
+                          modal.style.display = "flex";
+                          video.play();
+                        }
+
+                        window.onclick = function(event) {
+                          if (event.target == modal) {
+                            modal.style.display = "none";
+                            video.pause();
+                          }
+                        }
+                    </script>
+
+                    <p><a href="https://github.com/Arthur-king18/YouTube-Question">Source Code</a></p>
+                </div>
+            </div>
+
+            <h2 class="content__subheader">Similar projects</h2>
+            <div class="content__main-item project">
+                <a data-fslightbox href="assets/img/shah.jpg">
+                    <img src="/assets/img/shah.jpg" alt="Chess Coach">
+                </a>
+                <div>
+                    <div class="main-item__title">
+                        <a href="/example/chess.html"><span>Chess Coach</span></a>
+                    </div>
+                    <div class="main-item__description">
+                        <p>
+                            This is my first project that I created for learning purposes. The goals were ambitious, but I handled them perfectly
+                        </p>
+                    </div>
+                    <div class="main-item__subdescription">
+                        <p><span>Stack:</span> Python, Python core libraries</p>
+                        <p class="main-item__links"><a href="/example/chess.html"><span>Preview</span></a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content__main-item project">
+                <a data-fslightbox href="assets/img/google.jpg">
+                    <img src="/assets/img/google.jpg" alt="Google Maps Parser">
+                </a>
+                <div>
+                    <div class="main-item__title">
+                        <a href="/example/google.html"><span>Google Maps Parser</span></a>
+                    </div>
+                    <div class="main-item__description">
+                        <p>
+                             This project has been such a valuable resource that I and my entire family find ourselves relying on it frequently
+                        </p>
+                    </div>
+                    <div class="main-item__subdescription">
+                        <p><a href="#">Stack:</a> Python, API Google Maps</p>
+                        <p class="main-item__links"><a href="/example/google.html"><span>Preview</span></a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <span>© Arthur Shakiryanov</span>
+        </div>
+        <div>
+        </div>
+    </div>
+</div>
+<script src="/assets/scripts/fslightbox.js"></script>
+</body>
+</html>
